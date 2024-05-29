@@ -1,0 +1,113 @@
+---
+title: "Mermaid Diagram Slide"
+format: revealjs
+---
+
+## Example of a Mermaid Diagram
+
+```{mermaid}
+graph TD;
+    subgraph AI Supply Chain Process
+        direction TB
+        A[Data Gathering AI] -->|Raw Data| B[Store to Database 1];
+        B -->|Structured Data| C[Data Processing AI];
+        C -->|Processed Data| D[Store to Database 2];
+        D -->|Mapped Data| E[Data Mapping and Questioning AI];
+        E -->|Final Data| F[Store to Database 3];
+        E -->|Queries & Results| G[Frontend Interface];
+    end
+
+    subgraph External Data Sources
+        direction RL
+        EXT1[Supplier Data] --> A
+        EXT2[Inventory Data] --> A
+        EXT3[Customer Orders] --> A
+    end
+
+    subgraph Frontend Components
+        direction TB
+        G -->|User Interaction| H[Dashboard];
+        G -->|User Interaction| I[Reporting Module];
+        G -->|User Interaction| J[Alerts & Notifications];
+    end
+
+    subgraph Backend Services
+        direction TB
+        K[Authentication Service] -.->|Security| G
+        L[API Gateway] -.->|API Calls| G
+        M[Data Analysis Service] -.->|Insights| E
+    end
+
+    %% Styles for nodes
+    style A fill:#f9f,stroke:#333,stroke-width:4px;
+    style B fill:#bbf,stroke:#333,stroke-width:4px;
+    style C fill:#f9f,stroke:#333,stroke-width:4px;
+    style D fill:#bbf,stroke:#333,stroke-width:4px;
+    style E fill:#f9f,stroke:#333,stroke-width:4px;
+    style F fill:#bbf,stroke:#333,stroke-width:4px;
+    style G fill:#6f9,stroke:#333,stroke-width:4px;
+    style H fill:#ff9,stroke:#333,stroke-width:2px;
+    style I fill:#ff9,stroke:#333,stroke-width:2px;
+    style J fill:#ff9,stroke:#333,stroke-width:2px;
+    style K fill:#fdfd96,stroke:#333,stroke-width:2px;
+    style L fill:#fdfd96,stroke:#333,stroke-width:2px;
+    style M fill:#fdfd96,stroke:#333,stroke-width:2px;
+    style EXT1 fill:#ddd,stroke:#333,stroke-width:2px;
+    style EXT2 fill:#ddd,stroke:#333,stroke-width:2px;
+    style EXT3 fill:#ddd,stroke:#333,stroke-width:2px;
+```
+```{mermaid} 
+graph TD;
+    subgraph External Data Sources
+        ED1[ERP Systems] --> A
+        ED2[CRM Systems] --> A
+        ED3[IoT Devices] --> A
+        ED4[Third-party APIs] --> A
+        ED5[Social Media] --> A
+        ED6[Market Data] --> A
+    end
+
+    subgraph AI Supply Chain Core
+        A[Data Gathering AI] -->|Extracted Data| B[Store to Database 1]
+        B -->|Structured Data| C[Data Processing AI]
+        C -->|Processed Data| D[Store to Database 2]
+        D -->|Mapped Data| E[Data Mapping and Questioning AI]
+        E -->|Final Data| F[Store to Database 3]
+        E -->|Queries & Results| G[Frontend Interface]
+    end
+
+    subgraph Frontend Components
+        G -->|User Interaction| H[Dashboard]
+        G -->|User Interaction| I[Reporting Module]
+        G -->|User Interaction| J[Alerts & Notifications]
+    end
+
+    subgraph Backend Services
+        K[Authentication Service] -.->|Security| G
+        L[API Gateway] -.->|API Calls| G
+        M[Data Analysis Service] -.->|Insights| E
+        N[Machine Learning Models] -.->|Predictions| E
+        O[Data Warehouse] -.->|Historical Data| C
+    end
+
+    subgraph User Roles
+        UR1[Supply Chain Manager] -.->|Manages| H
+        UR2[Data Analyst] -.->|Analyzes| I
+        UR3[IT Support] -.->|Maintains| J
+    end
+
+    %% Styles for nodes
+    style A fill:#f9f,stroke:#333,stroke-width:4px
+    style B fill:#bbf,stroke:#333,stroke-width:4px
+    style C fill:#f9f,stroke:#333,stroke-width:4px
+    style D fill:#bbf,stroke:#333,stroke-width:4px
+    style E fill:#f9f,stroke:#333,stroke-width:4px
+    style F fill:#bbf,stroke:#333,stroke-width:4px
+    style G fill:#6f9,stroke:#333,stroke-width:4px
+    style H fill:#ff9,stroke:#333,stroke-width:2px
+    style I fill:#ff9,stroke:#333,stroke-width:2px
+    style J fill:#ff9,stroke:#333,stroke-width:2px
+    style K fill:#fdfd96,stroke:#333,stroke-width:2px
+    style L fill:#fdfd96,stroke:#333,stroke-width:2px
+    style M fill:#fdfd96
+```
